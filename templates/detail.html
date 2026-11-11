@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block judul %}{{ mhs.nama | title }}{% endblock %}
+{% block isi %}
+  <h1>{{ mhs.nama | title }}</h1>
+  <p>NIM {{ mhs.nim }} · Prodi {{ mhs.prodi }}</p>
+  <p>IPK {{ mhs.ipk }} ({{ mhs.ipk | predikat }})</p>
+  <p>Kehadiran {{ mhs.kehadiran | persen }}</p>
+  <p>Catatan dosen wali: {{ catatan | default("belum ada catatan") }}</p>
+{% endblock %}

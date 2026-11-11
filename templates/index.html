@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block isi %}
+  <h1>Dashboard Dosen Wali</h1>
+  <p>Total mahasiswa: {{ total }} · Perlu perhatian: {{ berisiko | length }}</p>
+  {% if berisiko %}
+    <ul>
+    {% for m in berisiko %}
+      <li><a href="{{ url_for('detail_mahasiswa', nim=m.nim) }}">{{ m.nama | title }}</a>
+          ({{ m.prodi }}, IPK {{ m.ipk }}, hadir {{ m.kehadiran | persen }})</li>
+    {% endfor %}
+    </ul>
+  {% else %}
+    <p>Tidak ada mahasiswa yang perlu perhatian.</p>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,170 @@
+/* ==========================================
+   STYLING SI PERINGATAN DINI AKADEMIK (FLASK)
+   ========================================== */
+
+/* 1. Global Reset & Base Fonts */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f6;
+  color: #333333;
+  line-height: 1.6;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* 2. Navigation Header */
+nav {
+  background-color: #004b87;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #64b5f6;
+}
+
+/* 3. Main Content Container */
+main {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  min-height: 400px;
+}
+
+h1 {
+  color: #004b87;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 8px;
+}
+
+p {
+  margin-bottom: 15px;
+  color: #555555;
+}
+
+/* 4. Styled Table (Daftar Mahasiswa) */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+th {
+  background-color: #0066b2;
+  color: #ffffff;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+tr:nth-child(even) {
+  background-color: #f9fbfd;
+}
+
+tr:hover {
+  background-color: #eef5fc;
+}
+
+td {
+  border-bottom: 1px solid #eef2f5;
+  font-size: 0.95rem;
+}
+
+/* 5. Lists & Dashboard Links */
+ul {
+  list-style-type: none;
+  margin-top: 15px;
+}
+
+li {
+  background: #fff5f5;
+  border-left: 4px solid #e53e3e;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+li a {
+  color: #c53030;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+li a:hover {
+  text-decoration: underline;
+}
+
+/* 6. Form & Buttons (Halaman Cari) */
+form {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+input[name="nim"] {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 300px;
+  outline: none;
+}
+
+input[name="nim"]:focus {
+  border-color: #0066b2;
+  box-shadow: 0 0 5px rgba(0, 102, 178, 0.3);
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #0066b2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #004b87;
+}
+
+/* 7. Footer */
+footer {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #888888;
+  padding-top: 15px;
+  border-top: 1px solid #e0e0e0;
+}

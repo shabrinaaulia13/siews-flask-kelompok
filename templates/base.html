@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <title>{% block judul %}SI Peringatan Dini{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='gaya.css') }}">
+</head>
+<body>
+  <nav>
+    <a href="{{ url_for('beranda') }}">Beranda</a> |
+    <a href="{{ url_for('daftar_mahasiswa') }}">Mahasiswa</a> |
+    <a href="{{ url_for('cari_nim') }}">Cari NIM</a>
+  </nav>
+  <main>{% block isi %}{% endblock %}</main>
+  <footer>
+    Prodi S1 Sistem Informasi · {{ judul_app | default("SI Peringatan Dini") }}
+  </footer>
+</body>
+</html>

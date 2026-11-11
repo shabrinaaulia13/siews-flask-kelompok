@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block judul %}Daftar Mahasiswa{% endblock %}
+{% block isi %}
+  <h1>Daftar Mahasiswa {{ prodi | default("Semua Prodi", true) }}</h1>
+  <p>Filter: {{ ["SI", "TI", "MI"] | join(" | ") }} (tambahkan ?prodi=SI pada URL)</p>
+  <table>
+    <tr><th>NIM</th><th>Nama</th><th>IPK</th><th>Predikat</th></tr>
+    {% for m in data | sort(attribute="ipk", reverse=true) %}
+    <tr>
+      <td>{{ m.nim }}</td>
+      <td>{{ m.nama | title }}</td>
+      <td>{{ "%.2f" | format(m.ipk) }}</td>
+      <td>{{ m.ipk | predikat }}</td>
+    </tr>
+    {% else %}
+    <tr><td colspan="4">Tidak ada data.</td></tr>
+    {% endfor %}
+  </table>
+{% endblock %}
